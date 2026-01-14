@@ -30,17 +30,19 @@
     <!-- Template Stylesheet -->
     <link href="css/style.css" rel="stylesheet">
 
-    <link rel="stylesheet" href="lib/owlcarousel/assets/owl.carousel.min.css">
-<link rel="stylesheet" href="lib/owlcarousel/assets/owl.theme.default.min.css">
-
+    <!-- MDB CSS -->
+  <link
+    href="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/6.4.2/mdb.min.css"
+    rel="stylesheet"
+  />
 </head>
 
-<body>
+<body class="d-flex flex-column min-vh-100">
 
     <!-- Navbar Start -->
     <nav class="navbar navbar-expand-lg bg-white navbar-light shadow sticky-top p-0">
         <a href="index.html" class="navbar-brand d-flex align-items-center px-4 px-lg-5">
-          <img src="img/logo.png" alt="Logo" height="45">
+          <img src="img/logo.png" alt="Logo" height="90">
         </a>
         <button type="button" class="navbar-toggler me-4" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
             <span class="navbar-toggler-icon"></span>
@@ -57,38 +59,53 @@
     </nav>
     <!-- Navbar End -->
 
+    
+        <main class="flex-grow-1">
 
-    <!-- Carousel Start -->
-    <!-- Carousel Desktop -->
-<div class="container-fluid p-0 desktop-slider">
-    <div class="owl-carousel header-carousel">
-        <div class="owl-carousel-item">
-            <img src="img/11.png" alt="">
-        </div>
-        <div class="owl-carousel-item">
-            <img src="img/22.png" alt="">
-        </div>
-        <div class="owl-carousel-item">
-            <img src="img/33.png" alt="">
-        </div>
-    </div>
-</div>
+<!-- Carousel Wrapper -->
+<div id="carouselBasicExample"
+     class="carousel slide"
+     data-mdb-carousel-init
+     data-mdb-ride="carousel"
+     data-mdb-interval="3000"
+     data-mdb-wrap="true">
 
-<!-- Carousel Mobile -->
-<div class="container-fluid p-0 mobile-slider">
-    <div class="owl-carousel mobile-carousel">
-        <div class="owl-carousel-item">
-            <img src="img/m1.png" alt="">
-        </div>
-        <div class="owl-carousel-item">
-            <img src="img/m2.png" alt="">
-        </div>
-        <div class="owl-carousel-item">
-            <img src="img/m3.png" alt="">
-        </div>
+  <div class="carousel-inner">
+
+    <!-- Slide 1 -->
+    <div class="carousel-item active">
+      <img src="img/11.png" class="d-block w-100" alt="Slide 1">
     </div>
+
+    <!-- Slide 2 -->
+    <div class="carousel-item">
+      <img src="img/22.png" class="d-block w-100" alt="Slide 2">
+    </div>
+
+    <!-- Slide 3 -->
+    <div class="carousel-item">
+      <img src="img/33.png" class="d-block w-100" alt="Slide 3">
+    </div>
+
+  </div>
+
+  <!-- Controls -->
+  <button class="carousel-control-prev"
+          type="button"
+          data-mdb-target="#carouselBasicExample"
+          data-mdb-slide="prev">
+    <span class="carousel-control-prev-icon"></span>
+  </button>
+
+  <button class="carousel-control-next"
+          type="button"
+          data-mdb-target="#carouselBasicExample"
+          data-mdb-slide="next">
+    <span class="carousel-control-next-icon"></span>
+  </button>
+
 </div>
-    <!-- Carousel End -->
+<!-- Carousel wrapper -->
 
     <!-- About Start -->
     <div class="container-xxl py-5">
@@ -124,44 +141,60 @@
     <!-- About End -->
 
         <!-- Service Start -->
-  <div class="container-xxl py-5">
-    <div class="container">
-        <div class="row g-4 justify-content-center">
-            <h2 class="text-center mb-5">Layanan Kami</h2>
+ <div class="container-xxl py-5">
+  <div class="container">
+    <h2 class="text-center mb-5 fw-bold">Layanan Kami</h2>
 
-            <div class="col-lg-3 col-sm-6 wow fadeInUp" data-wow-delay="0.1s">
-                <div class="service-item text-center pt-3">
-                    <div class="p-4">
-                        <i class="fa fa-3x fa-chalkboard-teacher text-primary mb-4"></i>
-                        <h5 class="mb-3">Pet Hotel</h5>
-                        <p>Tersedia Pet Hotel untuk harian, mingguan ataupun jangka panjang.</p>
-                    </div>
-                </div>
-            </div>
+    <div class="row g-4 justify-content-center">
 
-            <div class="col-lg-3 col-sm-6 wow fadeInUp" data-wow-delay="0.3s">
-                <div class="service-item text-center pt-3">
-                    <div class="p-4">
-                        <i class="fa fa-3x fa-school text-primary mb-4"></i>
-                        <h5 class="mb-3">Grooming</h5>
-                        <p>Layanan tambahan grooming untuk menjaga kebersihan dan kesehatan sugar glider.</p>
-                    </div>
-                </div>
-            </div>
-
-            <div class="col-lg-3 col-sm-6 wow fadeInUp" data-wow-delay="0.5s">
-                <div class="service-item text-center pt-3">
-                    <div class="p-4">
-                        <i class="fa fa-3x fa-home text-primary mb-4"></i>
-                        <h5 class="mb-3">Delivery</h5>
-                        <p>Layanan tambahan antar jemput sugar glidermu.</p>
-                    </div>
-                </div>
-            </div>
-
+      <!-- Pet Hotel -->
+      <div class="col-lg-3 col-md-6 col-12">
+        <div class="service-card h-100 text-center hotel">
+          <div class="icon-circle">
+            <i class="fa fa-bed"></i>
+          </div>
+          <h5>Pet Hotel</h5>
+          <p>Penitipan sugar glider dengan perawatan penuh kasih dan lingkungan nyaman.</p>
         </div>
+      </div>
+
+      <!-- Open Adopt -->
+      <div class="col-lg-3 col-md-6 col-12">
+        <div class="service-card h-100 text-center adopt">
+          <div class="icon-circle">
+            <i class="fa fa-hand-holding-heart"></i>
+          </div>
+          <h5>Open Adopt</h5>
+          <p>Program adopsi sugar glider dengan seleksi dan pendampingan.</p>
+        </div>
+      </div>
+
+      <!-- Grooming -->
+      <div class="col-lg-3 col-md-6 col-12">
+        <div class="service-card h-100 text-center grooming">
+          <div class="icon-circle">
+            <i class="fa fa-cut"></i>
+          </div>
+          <h5>Grooming</h5>
+          <p>Perawatan tambahan untuk menjaga kebersihan dan kesehatan sugar glider.</p>
+        </div>
+      </div>
+
+      <!-- Delivery -->
+      <div class="col-lg-3 col-md-6 col-12">
+        <div class="service-card h-100 text-center delivery">
+          <div class="icon-circle">
+            <i class="fa fa-truck"></i>
+          </div>
+          <h5>Delivery</h5>
+          <p>Layanan antar jemput sugar glider dengan aman dan terpercaya.</p>
+        </div>
+      </div>
+
     </div>
+  </div>
 </div>
+
 
 <!-- Galeri Start -->
 <section id="galeri" class="container-xxl py-5">
@@ -298,48 +331,77 @@
 
 </div>
 </section>
+ </main>
 
-        
-    <!-- Footer Start -->
-   <div class="container-fluid footer-custom pt-5 mt-5" data-wow-delay="0.1s">
-        <div class="container py-5">
-            <div class="row g-5">
-                <div class="col-lg-3 col-md-6">
-                    <h4 class="text-white mb-3">Quick Link</h4>
-                    <a class="btn btn-link" href="tentangkami.html">Tentang Kita</a>
-                    <a class="btn btn-link" href="layanan.html">Layanan</a> 
-                    <a class="btn btn-link" href="https://www.instagram.com/popsy.sugarglider?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==">IG</a>
-                    <a class="btn btn-link" href="https://wa.me/6282111522636?text=Halo,%20saya%20ingin%20menitipkan%20Sugar%20Glider%20saya.%20Boleh%20dibantu?">WA</a>
-                </div>
-                <div class="col-lg-3 col-md-6">
-                    <h4 class="text-white mb-3">Kontak</h4>
-                    <p class="mb-2"><i class="fa fa-map-marker-alt me-3"></i>Kavling DKI, Meruya Selatan, Jakarta Barat</p>
-                    <p class="mb-2"><i class="fa fa-phone-alt me-3"></i>082111522636</p>
-                    <p class="mb-2"><i class="fa fa-envelope me-3"></i>popsy.sugarglider@gmail.com</p>
-                </div>
-        </div>
-        <div class="container">
-            <div class="copyright">
-                <div class="row">
-                    <div class="col-md-6 text-center text-md-start mb-3 mb-md-0">
-                        &copy; <a class="border-bottom" href="#">Popsy's Pethotel</a>, All Right Reserved.
+<!-- Footer Start -->
+<div class="container-fluid footer-custom text-light pt-5 mt-auto">
+  <div class="container py-5">
+    <div class="row g-5">
 
-                        <!--/*** This template is free as long as you keep the footer author’s credit link/attribution link/backlink. If you'd like to use the template without the footer author’s credit link/attribution link/backlink, you can purchase the Credit Removal License from "https://htmlcodex.com/credit-removal". Thank you for your support. ***/-->
-                        Designed By <a class="border-bottom" href="https://github.com/serafael1506">Rafael Simarmata</a>
-                    </div>
-                    <div class="col-md-6 text-center text-md-end">
-                        <div class="footer-menu">
-                        </div>
-                    </div>
-                </div>
-            </div>
+      <!-- Brand / About -->
+      <div class="col-lg-4 col-md-6">
+        <h4 class="text-white mb-3">Popsy.sugarglider</h4>
+        <p>
+          Pet hotel khusus sugar glider dengan perawatan penuh kasih,
+          lingkungan bersih, dan update harian untuk kenyamanan owner.
+        </p>
+      </div>
+
+      <!-- Quick Link -->
+      <div class="col-lg-4 col-md-6">
+        <h4 class="text-white mb-3">Quick Link</h4>
+        <a class="footer-link" href="tentangkami.html">Tentang Kami</a>
+        <a class="footer-link" href="layanan.html">Layanan</a>
+        <a class="footer-link" href="#galeri">Galeri</a>
+        <a class="footer-link" href="#">Kontak</a>
+      </div>
+
+      <!-- Contact -->
+      <div class="col-lg-4 col-md-6">
+        <h4 class="text-white mb-3">Kontak</h4>
+        <p><i class="fa fa-map-marker-alt me-2"></i>Kavling DKI, Meruya Selatan, Jakarta Barat</p>
+        <p><i class="fa fa-phone-alt me-2"></i>0821-1152-2636</p>
+        <p><i class="fa fa-envelope me-2"></i>popsy.sugarglider@gmail.com</p>
+
+        <div class="d-flex mt-3">
+          <a class="btn btn-outline-light btn-social me-2"
+             href="https://www.instagram.com/popsy.sugarglider"
+             target="_blank">
+            <i class="fab fa-instagram"></i>
+          </a>
+
+          <a class="btn btn-outline-light btn-social"
+             href="https://wa.me/6282111522636"
+             target="_blank">
+            <i class="fab fa-whatsapp"></i>
+          </a>
         </div>
+      </div>
+
     </div>
-    <!-- Footer End -->
+  </div>
+
+  <!-- Copyright -->
+  <div class="container border-top border-secondary pt-3">
+    <div class="row">
+      <div class="col-md-6 text-center text-md-start">
+        &copy; 2026 <strong>Popsy.sugarglider</strong>. All Rights Reserved.
+      </div>
+      <div class="col-md-6 text-center text-md-end">
+        Designed by <a href="https://github.com/serafael1506" class="text-light">Rafael Simarmata</a>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- Footer End -->
+
 
 
     <!-- Back to Top -->
-    <a href="#" class="btn btn-lg btn-primary btn-lg-square back-to-top"><i class="bi bi-arrow-up"></i></a>
+    <button class="btn btn-lg btn-primary back-to-top" type="button">
+  <i class="bi bi-arrow-up"></i>
+</button>
+
 
 
     <!-- JavaScript Libraries -->
@@ -377,13 +439,38 @@
   });
 </script>
 
-<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-<script src="lib/owlcarousel/owl.carousel.min.js"></script>
+<script
+  src="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/6.4.2/mdb.min.js">
+</script>
+
+
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+  const backToTop = document.querySelector(".back-to-top");
+
+  // show / hide button
+  window.addEventListener("scroll", () => {
+    if (window.pageYOffset > 300) {
+      backToTop.classList.add("show");
+    } else {
+      backToTop.classList.remove("show");
+    }
+  });
+
+  // scroll to top (FIX)
+  backToTop.addEventListener("click", () => {
+    window.scrollTo({
+      top: 0,
+      left: 0,
+      behavior: "smooth"
+    });
+  });
+});
+</script>
+
+
 
 
 </body>
 
 </html>
-
-
-
